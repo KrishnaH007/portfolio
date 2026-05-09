@@ -1,65 +1,233 @@
-import Image from "next/image";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
+
+  const projects = [
+    {
+      title: "Synchronus",
+      description:
+        "Real-time chat application built using MERN stack with Socket.io, JWT authentication and MongoDB.",
+      tech: ["React", "Node.js", "MongoDB", "Socket.io"],
+      github: "https://github.com/KrishnaH007",
+    },
+    {
+      title: "Market Dashboard",
+      description:
+        "Commodity analytics dashboard with structured market data and insights for traders.",
+      tech: ["React", "Chart.js", "Node.js"],
+      github: "https://github.com/KrishnaH007",
+    },
+    {
+      title: "Portfolio Website",
+      description:
+        "Personal portfolio built using Next.js and Tailwind showcasing projects and skills.",
+      tech: ["Next.js", "Tailwind", "TypeScript"],
+      github: "https://github.com/KrishnaH007",
+    },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <div className="bg-[#0a0f1c] text-gray-200">
+
+      <Navbar />
+
+      {/* HERO */}
+      <section
+        id="intro"
+        className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden"
+      >
+
+        {/* Background glow */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-black"></div>
+
+        <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
+
+          {/* LEFT */}
+          <div>
+            <p className="text-blue-400 mb-3 tracking-wide">
+              QUANT TRADER • MARKET ANALYST
+            </p>
+
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white">
+              Krishna Heda
+            </h1>
+
+            <p className="text-gray-400 mt-5 max-w-lg text-lg">
+              Trading futures & derivatives in commodities. Building data-driven strategies 
+              and exploring quantitative finance to extract edge from markets.
+            </p>
+
+            <div className="flex gap-4 mt-8">
+              <a
+                href="#projects"
+                className="px-6 py-3 rounded-lg bg-blue-500 hover:bg-blue-400 text-white font-semibold transition shadow-lg shadow-blue-500/20"
+              >
+                View Work
+              </a>
+
+              <a
+                href="https://github.com/KrishnaH007"
+                target="_blank"
+                className="px-6 py-3 rounded-lg border border-gray-700 hover:bg-gray-800 transition"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          {/* RIGHT */}
+          <div className="flex justify-center relative">
+            <div className="absolute w-[120%] h-[120%] bg-blue-500/10 blur-3xl rounded-full"></div>
+
+            <img
+              src="/avatar.png"
+              alt="quant trader"
+              className="relative w-full max-w-md rounded-lg border border-gray-800 shadow-2xl transition duration-500 hover:scale-[1.02]"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+
         </div>
-      </main>
+      </section>
+
+      {/* PROJECTS */}
+      <section id="projects" className="py-24 px-6 fade-in">
+        <h2 className="text-3xl font-bold text-center mb-12 text-white">
+          Projects
+        </h2>
+
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="p-6 rounded-xl bg-[#111827] border border-gray-800 hover:border-blue-400 hover:shadow-md hover:shadow-blue-500/20 transition"
+            >
+              <h3 className="text-xl font-semibold mb-2 text-white">
+                {project.title}
+              </h3>
+
+              <p className="text-gray-400 text-sm mb-4">
+                {project.description}
+              </p>
+
+              <div className="flex gap-2 flex-wrap mb-4">
+                {project.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-xs px-2 py-1 bg-gray-800 rounded-md text-gray-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <a
+                href={project.github}
+                target="_blank"
+                className="text-sm text-blue-400 hover:underline"
+              >
+                GitHub →
+              </a>
+            </div>
+          ))}
+
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section id="skills" className="py-24 px-6 fade-in">
+        <h2 className="text-3xl font-bold text-center mb-12 text-white">
+          Skills
+        </h2>
+
+        <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+
+          {/* FRONTEND */}
+          <div className="p-6 bg-[#111827] border border-gray-800 rounded-xl">
+            <h3 className="text-blue-400 mb-4 font-semibold">Frontend</h3>
+            <div className="flex flex-wrap gap-2">
+              {["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind"].map((s) => (
+                <span key={s} className="px-2 py-1 bg-gray-800 rounded text-sm">{s}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* BACKEND */}
+          <div className="p-6 bg-[#111827] border border-gray-800 rounded-xl">
+            <h3 className="text-green-400 mb-4 font-semibold">Backend</h3>
+            <div className="flex flex-wrap gap-2">
+              {["Node.js", "Express", "MongoDB", "REST APIs"].map((s) => (
+                <span key={s} className="px-2 py-1 bg-gray-800 rounded text-sm">{s}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* QUANT */}
+          <div className="p-6 bg-[#111827] border border-gray-800 rounded-xl">
+            <h3 className="text-yellow-400 mb-4 font-semibold">Quant & Data</h3>
+            <div className="flex flex-wrap gap-2">
+              {[
+                "Python",
+                "Pandas",
+                "NumPy",
+                "Statistics",
+                "Derivatives",
+                "Futures & Options",
+                "Market Analysis"
+              ].map((s) => (
+                <span key={s} className="px-2 py-1 bg-gray-800 rounded text-sm">{s}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* TOOLS */}
+          <div className="p-6 bg-[#111827] border border-gray-800 rounded-xl">
+            <h3 className="text-purple-400 mb-4 font-semibold">Tools</h3>
+            <div className="flex flex-wrap gap-2">
+              {["Git", "GitHub", "Postman", "VS Code"].map((s) => (
+                <span key={s} className="px-2 py-1 bg-gray-800 rounded text-sm">{s}</span>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="py-24 px-6 text-center fade-in">
+        <h2 className="text-3xl font-bold mb-6 text-white">
+          Get In Touch
+        </h2>
+
+        <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+          Open to discussions around trading, quant strategies, and tech collaborations.
+        </p>
+
+        <div className="flex justify-center gap-6 flex-wrap">
+
+          <a
+            href="mailto:your-email@example.com"
+            className="px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-400 transition"
+          >
+            Email
+          </a>
+
+          <a
+            href="https://github.com/KrishnaH007"
+            target="_blank"
+            className="px-6 py-3 border border-gray-700 rounded-lg hover:bg-gray-800 transition"
+          >
+            GitHub
+          </a>
+
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="py-6 text-center text-gray-500 text-sm border-t border-gray-800">
+        © {new Date().getFullYear()} Krishna Heda
+      </footer>
+
     </div>
   );
 }
