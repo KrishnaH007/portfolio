@@ -57,22 +57,35 @@ export default function Home() {
               and exploring quantitative finance to extract edge from markets.
             </p>
 
-            <div className="flex gap-4 mt-8">
-              <a
-                href="#projects"
-                className="px-6 py-3 rounded-lg bg-blue-500 hover:bg-blue-400 text-white font-semibold transition shadow-lg shadow-blue-500/20"
-              >
-                View Work
-              </a>
+            <div className="flex gap-4 mt-8 flex-wrap">
 
-              <a
-                href="https://github.com/KrishnaH007"
-                target="_blank"
-                className="px-6 py-3 rounded-lg border border-gray-700 hover:bg-gray-800 transition"
-              >
-                GitHub
-              </a>
-            </div>
+  {/* View Work */}
+  <a
+    href="#projects"
+    className="px-6 py-3 rounded-lg border border-blue-400/40 text-blue-300 hover:bg-blue-500 hover:text-white transition duration-300"
+  >
+    View Work
+  </a>
+
+  {/* GitHub */}
+  <a
+    href="https://github.com/KrishnaH007"
+    target="_blank"
+    className="px-6 py-3 rounded-lg border border-blue-400/40 text-blue-300 hover:bg-blue-500 hover:text-white transition duration-300"
+  >
+    GitHub
+  </a>
+
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/in/krishna-heda-791663244/"
+    target="_blank"
+    className="px-6 py-3 rounded-lg border border-blue-400/40 text-blue-300 hover:bg-blue-500 hover:text-white transition duration-300"
+  >
+    LinkedIn
+  </a>
+
+</div>
           </div>
 
           {/* RIGHT */}
