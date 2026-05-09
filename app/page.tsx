@@ -217,24 +217,26 @@ export default function Home() {
           Open to discussions around trading, quant strategies, and tech collaborations.
         </p>
 
-        <div className="flex justify-center gap-6 flex-wrap">
+        <div className="flex justify-center gap-4 flex-wrap">
 
-          <a
-            href="mailto:your-email@example.com"
-            className="px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-400 transition"
-          >
-            Email
-          </a>
+  {/* Email */}
+  <a
+    href="mailto:hedakrishna07@gmail.com"
+    className="px-6 py-3 rounded-lg border border-blue-400/40 text-blue-300 hover:bg-blue-500 hover:text-white transition duration-300"
+  >
+    Email
+  </a>
 
-          <a
-            href="https://github.com/KrishnaH007"
-            target="_blank"
-            className="px-6 py-3 border border-gray-700 rounded-lg hover:bg-gray-800 transition"
-          >
-            GitHub
-          </a>
+  {/* GitHub */}
+  <a
+    href="https://github.com/KrishnaH007"
+    target="_blank"
+    className="px-6 py-3 rounded-lg border border-blue-400/40 text-blue-300 hover:bg-blue-500 hover:text-white transition duration-300"
+  >
+    GitHub
+  </a>
 
-        </div>
+</div>
       </section>
 
       {/* FOOTER */}
