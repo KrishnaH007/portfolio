@@ -61,11 +61,12 @@ export default function Home() {
 
   {/* View Work */}
   <a
-    href="#projects"
-    className="px-6 py-3 rounded-lg border border-blue-400/40 text-blue-300 hover:bg-blue-500 hover:text-white transition duration-300"
-  >
-    View Work
-  </a>
+  href="/resume.pdf"
+  target="_blank"
+  className="px-6 py-3 rounded-lg border border-blue-400/40 text-blue-300 hover:bg-blue-500 hover:text-white transition duration-300"
+>
+  Resume
+</a>
 
   {/* GitHub */}
   <a
