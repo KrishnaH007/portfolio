@@ -207,6 +207,85 @@ export default function Home() {
         </div>
       </section>
 
+{/* CERTIFICATIONS */}
+<section
+  id="certifications"
+  className="py-28 md:py-32 px-6"
+>
+  <div className="max-w-6xl mx-auto">
+
+    {/* Divider */}
+    <div className="h-px w-full bg-gray-800 mb-12"></div>
+
+    {/* Heading */}
+    <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 tracking-tight text-white">
+      Certifications
+    </h2>
+
+    <div className="grid md:grid-cols-2 gap-8">
+
+      {/* Certification 1 */}
+      <div className="p-6 rounded-xl bg-[#111827] border border-gray-800 shadow-sm hover:shadow-md hover:shadow-blue-500/10 transition duration-300">
+
+        <h3 className="text-lg font-semibold text-white mb-2">
+          <a
+            href="https://www.coursera.org/account/accomplishments/verify/9503VSS1FHWD"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-400 transition"
+          >
+            Neural Networks and Deep Learning
+          </a>
+        </h3>
+
+        <p className="text-sm text-gray-400 mb-4">
+          DeepLearning.AI • Coursera
+        </p>
+
+        <a
+          href="https://www.coursera.org/account/accomplishments/verify/9503VSS1FHWD"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-4 py-2 rounded-md border border-blue-400/40 text-blue-300 hover:bg-blue-500 hover:text-white transition duration-300 text-sm"
+        >
+          View Certificate ↗
+        </a>
+
+      </div>
+
+      {/* Certification 2 */}
+      <div className="p-6 rounded-xl bg-[#111827] border border-gray-800 shadow-sm hover:shadow-md hover:shadow-blue-500/10 transition duration-300">
+
+        <h3 className="text-lg font-semibold text-white mb-2">
+          <a
+            href="https://www.coursera.org/account/accomplishments/verify/W4L6O5HJCHZB"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-400 transition"
+          >
+            Python and Statistics for Financial Analysis
+          </a>
+        </h3>
+
+        <p className="text-sm text-gray-400 mb-4">
+          Hong Kong University • Coursera
+        </p>
+
+        <a
+          href="https://www.coursera.org/account/accomplishments/verify/W4L6O5HJCHZB"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-4 py-2 rounded-md border border-blue-400/40 text-blue-300 hover:bg-blue-500 hover:text-white transition duration-300 text-sm"
+        >
+          View Certificate ↗
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
       {/* CONTACT */}
       <section id="contact" className="py-24 px-6 text-center fade-in">
         <h2 className="text-3xl font-bold mb-6 text-white">
