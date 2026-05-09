@@ -80,7 +80,7 @@ export default function Home() {
             <div className="absolute w-[120%] h-[120%] bg-blue-500/10 blur-3xl rounded-full"></div>
 
             <img
-              src="/avatar.png"
+              src="/Avatar.png"
               alt="quant trader"
               className="relative w-full max-w-md rounded-lg border border-gray-800 shadow-2xl transition duration-500 hover:scale-[1.02]"
             />
